@@ -11,9 +11,10 @@ def home():
 @app.route('/get-comments')
 def get_comments():
     yid = request.args.get("youtube-id")
-    response = requests.get(f"https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&order=orderUnspecified&videoId={yid}&key=AIzaSyB7TWNjFR3KNILFW87AvyOpYnFfYN7yQfE")
+    response = requests.get(f"https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&maxResult=200&order=orderUnspecified&videoId={yid}&key=AIzaSyDCGCR-1-raEtVJ_5wzfo71pihzaLO09jE")
     response = response.json()
     return json.dumps(response)
 
+    
 if __name__ == '__main__':
     app.run(debug= True)
