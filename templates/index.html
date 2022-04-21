@@ -15,24 +15,13 @@
 
 <body>
     <section id="loading_container">
-        <div class="container-fluid">
-            <div id="loading" class="loading" style="font-size:100px;--duration:2s;--num-dot:10;display: none;">
-                <!--  index start from 0  -->
-                <div style="--index:0"></div>
-                <div style="--index:1"></div>
-                <div style="--index:2"></div>
-                <div style="--index:3"></div>
-                <div style="--index:4"></div>
-                <div style="--index:5"></div>
-                <div style="--index:6"></div>
-                <div style="--index:7"></div>
-                <div style="--index:8"></div>
-                <div style="--index:9"></div>
-                <!--  index ended with (var(--num-dot) - 1)  -->
+        <div class="container-fluid" style="position: relative;">
+            <div id="loading" class="loading" style="display: none;">
+                
             </div>
     </section>
-    <section id="content_container">
-        <div class="container mt-2 p-3 bg-white" style="box-shadow: 0 4px 8px rgba(255,100,121,0.25);">
+    <section id="content_container" class="p-3">
+        <div class="container p-3 bg-white" style="box-shadow: 0 4px 8px rgba(255,100,121,0.25);">
             <div class="row">
                 <div class="col-12 col-md-5 mb-3 mb-md-0" style="float: left;">
                     <!-- Youtube Id Form -->
@@ -40,26 +29,21 @@
                         <div class="mb-2">
                             <label for="youtubeId" class="form-label fs-5">Youtube Id</label>
                             <input type="text" id="youtubeId" class="form-control"
-                                placeholder="Enter your youtube id here...." aria-describedby="youtubeIdHelp"
+                                placeholder="Enter your youtube link here...." aria-describedby="youtubeIdHelp"
                                 name="youtubeId">
                             <div class="form-text" id="youtubeIdHelp"><span class="text-danger fs-4">*</span> Make sure
                                 thet your Id is valid</div>
-                                <select id="dropdown-comments" class="text-dark p-2">
-                                    <option value="all" id="all-comments">All comments</option>
-                                    <option value="top50" id="top-50-comments">Top 50 Commnets</option>
-                                    <option value="top100" id="top-100-comments">Top 100 Comments</option>
-                                  </select>
+                            <select id="dropdown-comments" class="text-dark p-2">
+                                <option value="all" id="all-comments">All comments</option>
+                                <option value="top50" id="top-50-comments">Top 50 Commnets</option>
+                                <option value="top100" id="top-100-comments">Top 100 Comments</option>
+                            </select>
                             <button type="submit" id="submit" class="btn btn btn-primary">Search</button>
                         </div>
                     </form>
 
-                    <!-- Dropdown Section -->
-                      <form>
-                        
-                      </form>
-
                     <!-- Youtube Video Rating -->
-                    <div class="mt-4">
+                    <div class="my-4">
                         <div class="rating">
                             <p class="fw-normal fs-5">Your Youtube Video rating is</p>
                             <p class="fs-4 px-3" id="rating" style="display: none;">
@@ -95,7 +79,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-7 scroll mt-2" style="float: right;overflow-x: hidden;overflow-y: scroll;height: 95vh;">
+                <div class="col-12 col-md-7 scroll mt-2"
+                    style="float: right;overflow-x: hidden;overflow-y: scroll;height: 90vh;">
                     <div class="rating__all px-2 mb-5 comments_box">
                         <!-- Comments section -->
                         <h5>Comments on your video</h5>
